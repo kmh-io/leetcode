@@ -1,9 +1,5 @@
 package binarysearch
 
-import (
-	"log"
-)
-
 func searchRepeact(nums []byte, target byte, curIndex int) int {
 	for curIndex+1 < len(nums) && nums[curIndex+1] == target {
 		curIndex++
@@ -28,9 +24,7 @@ func search(nums []byte, target byte) (int, int, int) {
 }
 
 func nextGreatestLetter(letters []byte, target byte) byte {
-	index, left, right := search(letters, target)
-
-	log.Println("left: ", left, " right: ", right)
+	index, _, right := search(letters, target)
 
 	if index == -1 {
 		if target <= letters[0] || target >= letters[len(letters)-1] {
