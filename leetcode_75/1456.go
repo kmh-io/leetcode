@@ -12,7 +12,6 @@ func maxVowels(s string, k int) int {
 	// leetcode
 	cur := count
 	for i := k; i < len(s); i++ {
-		println("count ", count)
 		if isVowel(s[i-k]) {
 			cur--
 		}
